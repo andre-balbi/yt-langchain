@@ -1,11 +1,71 @@
-# LangChain Experiments
+# Aplicação utilizando a biblioteca LangChain em Vídeos do YouTube
 
-This repository focuses on experimenting with the LangChain library to build powerful applications using large language models (LLMs). By leveraging cutting-edge language models like OpenAI's GPT-3.5 Turbo (and soon GPT-4), this project illustrates how to create a searchable database from a YouTube video transcript, conduct similarity search queries using the FAISS library, and respond to user inquiries with pertinent and accurate information.
+#### Introdução
 
-LangChain is a comprehensive framework designed for developing applications powered by language models. It surpasses mere API-based interaction with LLMs, as the most sophisticated applications are also data-aware and agent-based, enabling language models to connect with other data sources and engage with their environment. The LangChain framework is purpose-built to address these principles.
+O LangChain pode ser empregado para construir sistemas inteligentes semelhantes ao Auto-GPT. Estou seguro de que neste momento se apresenta uma oportunidade incrível para cientistas de dados e engenheiros de IA se destacarem, explorando essas ferramentas de maneira proveitosa. Podendo aproveitar essas ferramentas inovadoras, entrando um campo promissor e promovendo o desenvolvimento de soluções avançadas. A aplicação do LangChain abre portas para a criação de sistemas que não apenas atendam às necessidades atuais, mas também quebrando fronteiras na inteligência artificial, impulsionando a próxima geração de inovações tecnológicas.
+
+Neste projeto, exploramos a utilização da biblioteca LangChain no desenvolvimento de aplicações. Utilizamos modelos de linguagem, como o GPT-3.5 Turbo da OpenAI, para criar um banco de dados de pesquisa a partir de transcrições de vídeos do YouTube. Além disso, analisamos as buscas de similaridade usando a biblioteca FAISS, com base nas perguntas dos usuários. Nosso foco é oferecer respostas precisas e relevantes a essas perguntas, melhorando a interação do usuário com as informações nos vídeos
+
+![overview](img/overview.jpg)
+
+#### Objetivos
+
+- Utilização da biblioteca LangChain para desenvolver aplicações.
+- Criação de banco de dados pesquisável de transcrições de vídeos do YouTube.
+- Análise de similaridade com a biblioteca FAISS.
+- Fornecimento de respostas precisas e pertinentes a perguntas.
+
+#### Instalação
+
+1. Clonar the repository
+
+```bash
+git clone <https://github.com/daveebbelaar/langchain-experiments.git>
+
+```
+
+2. Criar um ambiente Python
+
+`Python 3.6` ou superior usando `venv` ou `conda`. Usando `conda`:
+
+```bash
+conda create -n langchain-env python=3.8
+```
+
+3. Instalar as dependências necessárias
+
+```bash
+pip install -r requirements.txt
+
+```
+
+4. Configurar as chaves em um arquivo .env**
+
+Crie um arquivo **`.env`** na pasta raiz do projeto. No interior do arquivo, adicione a chave API da OpenAI:
+
+```makefile
+OPENAI_API_KEY="your_api_key_here"
+
+```
+
+Carregue o arquivo .env usando o seguinte código:
+
+```python
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
+```
+---
+
+### Primeiro Contato com Langchain
+
+No link abaixo, encontra-se um notebook com exemplos práticos que serve como uma forma de introdução ao conceito da biblioteca LangChain. Esses exemplos visam facilitar a compreensão da aplicação real que será desenvolvida.
+
+[`Quickstart Guide`](introduction/quickstart_guide.ipynb)
 
 ---
 
-Este repositório se concentra em experimentar a biblioteca LangChain para criar aplicações poderosas com grandes modelos de linguagem (GMLs). Ao usar modelos de linguagem avançados como o GPT-3.5 Turbo da OpenAI (e em breve o GPT-4), o projeto demonstra como criar um banco de dados pesquisável a partir de uma transcrição de vídeo do YouTube, realizar buscas de similaridade usando a biblioteca FAISS e responder a perguntas dos usuários com informações relevantes e precisas.
+### Códigos do Projeto
 
-O LangChain é uma estrutura abrangente projetada para desenvolver aplicações usando modelos de linguagem. Vai além de apenas chamar um GML por meio de uma API, pois as aplicações mais avançadas também são conscientes dos dados e permitem que os modelos de linguagem se conectem a outras fontes de dados e interajam com o ambiente. O framework LangChain é construído especialmente para lidar com esses princípios.
+Códigos originais: [`youtube_chat.py`](youtube/youtube_chat.py)
+
+Passo a passo explicando a contrução da aplicação: [`youtube_chat.ipynb`](youtube/youtube_chat.ipynb)
