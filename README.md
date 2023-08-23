@@ -68,4 +68,4 @@ No link abaixo, encontra-se um notebook com exemplos práticos que serve como um
 
 Códigos originais: [`youtube_chat.py`](youtube/youtube_chat.py)
 
-Passo a passo da contrução da aplicação: [`youtube_chat.ipynb`](youtube/youtube_chat.ipynb)
+Passo a passo explicando a contrução da aplicação: [`youtube_chat.ipynb`](youtube/youtube_chat.ipynb)
